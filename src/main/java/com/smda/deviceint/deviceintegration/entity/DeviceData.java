@@ -1,5 +1,6 @@
 package com.smda.deviceint.deviceintegration.entity;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -10,6 +11,7 @@ public class DeviceData {
 
     @Transient
     public static final String SEQUENCE_NAME = "device_data_sequence";
+    @Id
     private Long dataId;
     private Long deviceId; // Foreign key referencing DeviceModel
     private LocalDateTime timestamp;
