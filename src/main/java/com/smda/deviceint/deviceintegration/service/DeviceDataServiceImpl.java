@@ -4,10 +4,12 @@ import com.smda.deviceint.deviceintegration.dao.DeviceDataRepository;
 import com.smda.deviceint.deviceintegration.entity.DeviceData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class DeviceDataServiceImpl implements DeviceDataService{
     @Autowired
     private DeviceDataRepository dataRepository;
